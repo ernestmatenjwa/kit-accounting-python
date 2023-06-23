@@ -8,7 +8,7 @@ fp.geometry('500x750')
 fp.configure(bg='#333333')
 
 def forgot():
-    if username_entry.get()=="" or password_entry.get()=="":
+    if username_entry.get()=="" or password_entry.get()=="" or password1_entry.get()=="":
         messagebox.showerror(title="Error", message="All Fields are required.")
     else:
         fpp.destroy()

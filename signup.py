@@ -7,14 +7,9 @@ window.title("Signin form")
 window.geometry('500x750')
 window.configure(bg='#333333')
 
-def login():
-    if username_entry.get()=="" or password_entry.get()=="":
-        messagebox.showerror(title="Error", message="All Fields are required.")
-    else:
-        messagebox.showinfo(title="do something", message="do something")
 
-def forgot():
-    if username_entry.get()=="" or password_entry.get()=="":
+def reg():
+    if username_entry.get()=="" or password_entry.get()=="" or e_entry.get()=="" or p_entry.get()=="" or ph_entry.get()=="" or bs_entry.get()=="" or fn_entry.get()=="":
         messagebox.showerror(title="Error", message="All Fields are required.")
     else:
         messagebox.showinfo(title="do something", message="do something")
@@ -22,7 +17,7 @@ def forgot():
 def sign_p():
     s.destroy()
     window.destroy()
-    import signup
+    import login
 s = tkinter.Frame(bg='#333333')
 
 # Creating widgets
@@ -50,7 +45,7 @@ fn_label = tkinter.Label(
     s, text="Fax Number", bg='#333333', fg="#FFFFFF", font=("Arial", 14))
 fn_entry = tkinter.Entry(s, font=("Arial", 16))
 login_button = tkinter.Button(
-    s, text="            Register             ", bg="#FF3399", fg="#FFFFFF", font=("Arial", 16), command=login)
+    s, text="            Register             ", bg="#FF3399", fg="#FFFFFF", font=("Arial", 16), command=reg)
 c_button = tkinter.Button(
     s, text="Have an account? Login", bg="#333333", fg="#FFFFFF", highlightthickness=0, borderwidth=0, font=("Arial", 11), command=sign_p)
 # Placing widgets on the screen
