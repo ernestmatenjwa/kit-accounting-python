@@ -19,6 +19,10 @@ def forgot():
     else:
         messagebox.showinfo(title="do something", message="do something")
 
+def sign_p():
+    s.destroy()
+    window.destroy()
+    import signup
 s = tkinter.Frame(bg='#333333')
 
 # Creating widgets
@@ -48,7 +52,7 @@ fn_entry = tkinter.Entry(s, font=("Arial", 16))
 login_button = tkinter.Button(
     s, text="            Register             ", bg="#FF3399", fg="#FFFFFF", font=("Arial", 16), command=login)
 c_button = tkinter.Button(
-    s, text="Have an account? Login", bg="#333333", fg="#FFFFFF", highlightthickness=0, borderwidth=0, font=("Arial", 11), command=forgot)
+    s, text="Have an account? Login", bg="#333333", fg="#FFFFFF", highlightthickness=0, borderwidth=0, font=("Arial", 11), command=sign_p)
 # Placing widgets on the screen
 login_label.grid(row=0, column=0, columnspan=2, sticky="news", pady=10)
 username_label.grid(row=1, column=0)

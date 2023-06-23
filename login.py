@@ -2,16 +2,20 @@ import tkinter
 from tkinter import messagebox
 
 
-window = tkinter.Tk()
-window.title("Login form")
-window.geometry('500x750')
-window.configure(bg='#333333')
+l = tkinter.Tk()
+l.title("Login form")
+l.geometry('500x750')
+l.configure(bg='#333333')
 
 def login():
     if username_entry.get()=="" or password_entry.get()=="":
         messagebox.showerror(title="Error", message="All Fields are required.")
     else:
         messagebox.showinfo(title="do something", message="do something")
+def login_p():
+    frame.destroy()
+    l.destroy()
+    import signup
 
 def forgot():
     if username_entry.get()=="" or password_entry.get()=="":
@@ -35,7 +39,7 @@ login_button = tkinter.Button(
 f_button = tkinter.Button(
     frame, text="Forgoten password?", bg="#333333", fg="#FFFFFF", highlightthickness=0, borderwidth=0, font=("Arial", 11), command=forgot)
 c_button = tkinter.Button(
-    frame, text="Dont have an account? create", bg="#333333", fg="#FFFFFF", highlightthickness=0, borderwidth=0, font=("Arial", 11), command=forgot)
+    frame, text="Dont have an account? create", bg="#333333", fg="#FFFFFF", highlightthickness=0, borderwidth=0, font=("Arial", 11), command=login_p)
 # Placing widgets on the screen
 login_label.grid(row=0, column=0, columnspan=2, sticky="news", pady=40)
 username_label.grid(row=1, column=0, pady=10)
@@ -47,4 +51,4 @@ f_button.grid(row=5, column=0, columnspan=2, pady=10)
 c_button.grid(row=7, column=0, columnspan=2)
 frame.pack()
 
-window.mainloop()
+l.mainloop()
