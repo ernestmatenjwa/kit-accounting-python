@@ -11,7 +11,9 @@ def login():
     if username_entry.get()=="" or password_entry.get()=="":
         messagebox.showerror(title="Error", message="All Fields are required.")
     else:
-        messagebox.showinfo(title="do something", message="do something")
+        frame.destroy()
+        l.destroy()
+        import dashboad
 def login_p():
     frame.destroy()
     l.destroy()
